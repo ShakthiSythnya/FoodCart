@@ -1,0 +1,33 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .toolbar-line {
+    border-bottom: 1px solid #CB2828;
+  }
+
+  
+  button {
+    border: none;
+   color: #CB2828;
+    background: none;
+    font-size: 18px;
+    padding: 2px;
+  }
+  .homeButton:hover {
+    background-color: #CB2828;
+    color: white;
+  }
+  
+  .toolbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #CB2828;
+  }
+
+  .icon {    
+    color:  #CB2828;
+    }
+ .icon.icon:hover {
+    color: white;
+    background-color: #CB2828;
+ }
