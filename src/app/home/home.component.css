@@ -1,9 +1,11 @@
 .horizontal-list {
     height: 250px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
    
   }
   .colInfo{
@@ -20,13 +22,16 @@
   }
   
   mat-chip-set {
-    flex: 1 1; 
+    flex: 1; 
+    width: 100%;
     box-sizing: border-box;
+    justify-content: space-around;
+    align-items: center;
   }
   
   mat-chip {
     
-    width: 190px;
+    width: 100%;
     align-items: center;
     justify-content: center;
     padding: 8px; 

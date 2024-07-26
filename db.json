@@ -48,6 +48,22 @@
       "rating":4,
       "price":120,
       "cooktime":20
+    },
+    {
+      "url":"./assets/eggCurry.jpg",
+      "name":"Egg Curry",
+      "isFavorite":false,
+      "rating":4,
+      "price":180,
+      "cooktime":30
+    },
+    {
+      "url":"./assets/PuliSadam.jpg",
+      "name":"Puli Sadam",
+      "isFavorite":false,
+      "rating":4,
+      "price":120,
+      "cooktime":20
     }
   ]
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FoodService } from '../services/food.service';
 import { FoodRecipe } from '../models/foodRecipe';
-import { Observable } from 'rxjs';
-
+import { map, Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router'; 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,24 +11,32 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   foodRecipes!: FoodRecipe[]
-  constructor(private foodService:FoodService) { }
+  constructor(private foodService:FoodService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getAllFoodRecipes()
-  }
-
-  getAllFoodRecipes()
-  {
-    this.foodService.getAll().subscribe({
-      next:(val:FoodRecipe[])=>{
-        if(val !== null && val.length > 0 )
-          {
-            console.log(this.foodRecipes)
+    
+    
+    this.activatedRoute.params.subscribe(param=>{
+      
+      console.log(param)
+      
+        this.getAllFoodRecipes().subscribe({
+          next:(val)=>{
             this.foodRecipes = val;
             console.log(this.foodRecipes);
-          }          
-      }
+            if(param['searchTerm']){param['searchTerm'];this.foodRecipes =this.foodRecipes.filter(f=> f.name.includes(param['searchTerm']));}
+          },
+        });    
+      
     })
+  }
+
+  getAllFoodRecipes():Observable<FoodRecipe[]>
+  {
+    return this.foodService.getAll().pipe(
+      map((val: FoodRecipe[])=>{
+       return val; })
+    );
   }
 
   getArray(rating: number)
