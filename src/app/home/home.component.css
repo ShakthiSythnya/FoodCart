@@ -1,9 +1,22 @@
 .horizontal-list {
+    height: 250px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    justify-content: flex-start;
-    padding-top: 10px;
+    justify-content: center;
+   
+  }
+  .colInfo{
+
+    display: flex;
+    flex-direction: column;;
+    justify-content: space-between;
+  }
+  .space-between{
+    display: flex;
+        flex-direction: row;
+    justify-content:initial;
+    color:#3d0707;;
   }
   
   mat-chip-set {
@@ -12,22 +25,22 @@
   }
   
   mat-chip {
-    display: flex;
+    
+    width: 190px;
     align-items: center;
     justify-content: center;
     padding: 8px; 
-    border: 1px solid whitesmoke;
-    border-radius: 1rem;
+    /* border: 1px solid whitesmoke;
+    border-radius: 1rem; */
     overflow: hidden;
     margin: 0.5rem;
     color: #3d0707;
   }
   
   mat-chip img {
-    max-width: 100%;
+    
     width: 190px;
     height: 190px;;
-    max-height: 100%;
     object-fit: cover; 
     border-radius: 1rem;
     overflow: hidden;

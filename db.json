@@ -18,16 +18,36 @@
   },
   "foodRecipes":[
     {
-      "url":"./assets/channaGravy.jpg"
+      "url":"./assets/channaGravy.jpg",
+      "name":"Channa Masala",
+      "isFavorite":true,
+      "rating":5,
+      "price":230,
+      "cooktime":40
     },
     {
-      "url":"./assets/chickenTikkaMasala.jpg"
+      "url":"./assets/chickenTikkaMasala.jpg",
+      "name":"chicken Tikka Masala",
+      "isFavorite":false,
+      "rating":3,
+      "price":320,
+      "cooktime":40
     },
     {
-      "url":"./assets/eggCurry.jpg"
+      "url":"./assets/eggCurry.jpg",
+      "name":"Egg Curry",
+      "isFavorite":false,
+      "rating":4,
+      "price":180,
+      "cooktime":30
     },
     {
-      "url":"./assets/PuliSadam.jpg"
+      "url":"./assets/PuliSadam.jpg",
+      "name":"Puli Sadam",
+      "isFavorite":false,
+      "rating":4,
+      "price":120,
+      "cooktime":20
     }
   ]
 }

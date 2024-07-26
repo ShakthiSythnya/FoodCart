@@ -23,11 +23,17 @@ export class HomeComponent implements OnInit {
       next:(val:FoodRecipe[])=>{
         if(val !== null && val.length > 0 )
           {
+            console.log(this.foodRecipes)
             this.foodRecipes = val;
             console.log(this.foodRecipes);
           }          
       }
     })
+  }
+
+  getArray(rating: number)
+  {
+    return Array(rating).fill(0);
   }
 
 }
