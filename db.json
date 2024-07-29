@@ -16,6 +16,31 @@
   "profile": {
     "name": "typicode"
   },
+  "tags":[
+    {
+      "tagName":"healthy",
+      "count":1
+    },
+    
+    {
+      "tagName":"quick",
+      "count":1
+    },
+    
+    {
+      "tagName":"spicy",
+      "count":2
+    },
+    
+    {
+      "tagName":"variety",
+      "count":2
+    },
+    {
+      "tagName":"all",
+      "count":6
+    }
+  ],
   "foodRecipes":[
     {
       "url":"./assets/channaGravy.jpg",
@@ -23,7 +48,8 @@
       "isFavorite":true,
       "rating":5,
       "price":230,
-      "cooktime":40
+      "cooktime":40,
+      "tagName":"healthy"
     },
     {
       "url":"./assets/chickenTikkaMasala.jpg",
@@ -31,7 +57,8 @@
       "isFavorite":false,
       "rating":3,
       "price":320,
-      "cooktime":40
+      "cooktime":40,
+      "tagName":"spicy"
     },
     {
       "url":"./assets/eggCurry.jpg",
@@ -39,7 +66,8 @@
       "isFavorite":false,
       "rating":4,
       "price":180,
-      "cooktime":30
+      "cooktime":30,
+      "tagName":"spicy"
     },
     {
       "url":"./assets/PuliSadam.jpg",
@@ -47,7 +75,8 @@
       "isFavorite":false,
       "rating":4,
       "price":120,
-      "cooktime":20
+      "cooktime":20,
+      "tagName":"variety"
     },
     {
       "url":"./assets/eggCurry.jpg",
@@ -55,7 +84,8 @@
       "isFavorite":false,
       "rating":4,
       "price":180,
-      "cooktime":30
+      "cooktime":30,
+      "tagName":"quick"
     },
     {
       "url":"./assets/PuliSadam.jpg",
@@ -63,7 +93,8 @@
       "isFavorite":false,
       "rating":4,
       "price":120,
-      "cooktime":20
+      "cooktime":20,
+      "tagName":"variety"
     }
   ]
 }

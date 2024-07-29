@@ -19,16 +19,50 @@ export class HomeComponent implements OnInit {
     this.activatedRoute.params.subscribe(param=>{
       
       console.log(param)
-      
-        this.getAllFoodRecipes().subscribe({
+      if(param['searchTerm']){
+        this.getAllFoodRecipesBySearchTerm(param['searchTerm']).subscribe({
           next:(val)=>{
             this.foodRecipes = val;
-            console.log(this.foodRecipes);
-            if(param['searchTerm']){param['searchTerm'];this.foodRecipes =this.foodRecipes.filter(f=> f.name.includes(param['searchTerm']));}
-          },
+            },
         });    
       
-    })
+    }else if(param['tagName']){
+      
+      this.getAllFoodRecipesByTag(param['tagName']).subscribe({
+        next: (val)=>{
+          this.foodRecipes = val;
+
+        }
+      })
+    }
+    else
+    {
+      this.getAllFoodRecipes().subscribe({
+        next:(val)=>{
+          this.foodRecipes = val;
+          },
+      });    
+    }
+    });
+  }
+
+  getAllFoodRecipesByTag(tagName:string):Observable<FoodRecipe[]>
+  {
+    return this.foodService.getAllByTags(tagName).pipe(
+      map((val: FoodRecipe[])=>{
+        return val;
+      })
+    )
+  }
+
+  
+  getAllFoodRecipesBySearchTerm(searchTerm:string):Observable<FoodRecipe[]>
+  {
+    return this.foodService.getAllBySearchTerm(searchTerm).pipe(
+      map((val: FoodRecipe[])=>{
+        return val;
+      })
+    )
   }
 
   getAllFoodRecipes():Observable<FoodRecipe[]>

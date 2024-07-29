@@ -1,3 +1,5 @@
+import { Tag } from "./tag";
+
 export type FoodRecipe = {
     url:string;
     name: string;
@@ -5,4 +7,5 @@ export type FoodRecipe = {
     isFavorite:boolean;
     cooktime:string;
     price:number;
+    tagName:string;
 }

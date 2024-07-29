@@ -8,6 +8,9 @@ const routes: Routes = [
   },
   {
     path:'search/:searchTerm',component:HomeComponent
+  },
+  {
+    path:'tag/:tagName',component:HomeComponent
   }
 ];
 
