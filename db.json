@@ -43,58 +43,84 @@
   ],
   "foodRecipes":[
     {
+      "id":1,
       "url":"./assets/channaGravy.jpg",
       "name":"Channa Masala",
       "isFavorite":true,
       "rating":5,
       "price":230,
       "cooktime":40,
-      "tagName":"healthy"
+      "tagName":[
+        {
+        "tagName":"healthy"}
+      ]
     },
     {
+      "id":2,
       "url":"./assets/chickenTikkaMasala.jpg",
       "name":"chicken Tikka Masala",
       "isFavorite":false,
       "rating":3,
       "price":320,
       "cooktime":40,
-      "tagName":"spicy"
+      "tagName":[
+        {
+        "tagName":"spicy"}
+      ]
     },
     {
+      "id":3,
       "url":"./assets/eggCurry.jpg",
-      "name":"Egg Curry",
+      "name":"Egg Masala",
       "isFavorite":false,
       "rating":4,
       "price":180,
-      "cooktime":30,
-      "tagName":"spicy"
+      "cooktime":30, "tagName":[
+        {
+        "tagName":"spicy"}
+      ]
     },
     {
+      
+      "id":4,
       "url":"./assets/PuliSadam.jpg",
       "name":"Puli Sadam",
       "isFavorite":false,
       "rating":4,
       "price":120,
       "cooktime":20,
-      "tagName":"variety"
+      "tagName":[
+        {
+        "tagName":"variety"}
+      ]
     },
     {
+      
+      "id":5,
       "url":"./assets/eggCurry.jpg",
       "name":"Egg Curry",
       "isFavorite":false,
       "rating":4,
       "price":180,
       "cooktime":30,
-      "tagName":"quick"
+      "tagName":[
+        {
+        "tagName":"quick"}
+      ]
     },
     {
+      
+      "id":6,
       "url":"./assets/PuliSadam.jpg",
-      "name":"Puli Sadam",
+      "name":"Tamarind Ric",
       "isFavorite":false,
       "rating":4,
-      "price":120,
+      "price":110,
       "cooktime":20,
-      "tagName":"variety"
+      "tagName":[
+        {
+        "tagName":"variety"}
+      ]
     }
   ]
 }

@@ -14,7 +14,7 @@ const routes: Routes = [
     path:'tag/:tagName',component:HomeComponent
   },
   {
-    path:'fooddetail/:food',component:FooddetailComponent
+    path:'fooddetail/:id',component:FooddetailComponent
   }
 ];
 

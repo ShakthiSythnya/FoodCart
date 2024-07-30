@@ -1,8 +1,8 @@
-<div>
-    <img src="../../assets/pizza.jpg">
+<div class="container">
+    <img src="{{food.url}}">
     <div>
         <div class="horizontal-align">
-            <h3>Vegetable Pizza</h3><mat-icon>favorite</mat-icon>
+            <h3>{{food.name}}</h3><mat-icon [hidden]="!food.isFavorite">favorite</mat-icon>
         </div>
 
         <div>
@@ -11,11 +11,11 @@
         <div>
             Italy
         </div>
-        <app-tag></app-tag>
+        <app-tag [foodTags]="food.tagName"></app-tag>
         <div>
-            Time to cook about 40-50 minutes
+            Time to cook about {{food.cooktime}} minutes
         </div>
-        <div>390.00 | currency:INR</div>
+        <div>{{food.price}}</div>
         <button>Add to Cart</button>
 
 

@@ -3,7 +3,7 @@
 <div class="horizontal-list">
     <mat-chip-set *ngFor="let food of foodRecipes">
                     
-        <mat-chip routerLink="/fooddetail/{{food}}">
+        <mat-chip routerLink="/fooddetail/{{food.id}}">
             <div class="space-between">
                 <div>{{food.name}}</div><mat-icon [disabled]="!food.isFavorite">favorite</mat-icon>
             </div>
