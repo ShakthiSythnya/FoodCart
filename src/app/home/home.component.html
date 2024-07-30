@@ -3,12 +3,12 @@
 <div class="horizontal-list">
     <mat-chip-set *ngFor="let food of foodRecipes">
                     
-        <mat-chip>
+        <mat-chip routerLink="/fooddetail/{{food}}">
             <div class="space-between">
                 <div>{{food.name}}</div><mat-icon [disabled]="!food.isFavorite">favorite</mat-icon>
             </div>
             <a>
-            <img [src]="food.url"> 
+            <img [src]="food.url" > 
             </a>
             <div class="colInfo">
                 <div class="space-between"><mat-icon>alarm</mat-icon>{{food.cooktime}} minutes</div>

@@ -17,6 +17,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { TagComponent } from './tag/tag.component';
+import { FooddetailComponent } from './fooddetail/fooddetail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TagComponent } from './tag/tag.component';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
-    TagComponent
+    TagComponent,
+    FooddetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+div img{
+    width: 600px;
+    height: 600px;
+}
+
+.horizontal-align{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 600px;
+}
+
+.tag-align{
+    justify-content: right;
+    align-self: flex-end;
+}
