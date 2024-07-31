@@ -24,10 +24,19 @@ export class FoodService {
     else
     {
       return this.getAll().pipe(
+        
        map((val:FoodRecipe[])=>{      
+        console.log(tagName)
 
-         const data= val.filter(x=>x.tagName.filter(y=>y.tagName.includes(tagName)));
-         console.log(data.filter(x=>x.tagName.length >0))
+        
+        val.forEach(food => {
+          food.tagName.filter(x=> !x.tagName.includes(tagName))
+          
+          
+        });
+
+          const data = val.filter(x=>x.tagName.find(y=>y.tagName.includes(tagName)));
+         console.log(data);
         return data.filter(x=>x.tagName.length >0);
        })
       )
