@@ -53,6 +53,10 @@
       "tagName":[
         {
         "tagName":"healthy"}
+      ],
+      "origins":[
+        "India",
+        "Arab"
       ]
     },
     {
@@ -66,6 +70,10 @@
       "tagName":[
         {
         "tagName":"spicy"}
+      ],
+      "origins":[
+        "North India",
+        "Arab"
       ]
     },
     {
@@ -78,6 +86,10 @@
       "cooktime":30, "tagName":[
         {
         "tagName":"spicy"}
+      ],
+      "origins":[
+        "Kerala - India",
+        "Srilanka"
       ]
     },
     {
@@ -92,6 +104,10 @@
       "tagName":[
         {
         "tagName":"variety"}
+      ],
+      "origins":[
+        "South India",
+        "Srilanka"
       ]
     },
     {
@@ -106,6 +122,9 @@
       "tagName":[
         {
         "tagName":"quick"}
+      ],
+      "origins":[
+        "South India"
       ]
     },
     {
@@ -120,6 +139,10 @@
       "tagName":[
         {
         "tagName":"variety"}
+      ],
+      "origins":[
+        "South India",
+        "Srilanka"
       ]
     }
   ]

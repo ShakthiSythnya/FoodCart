@@ -9,4 +9,5 @@ export type FoodRecipe = {
     cooktime:string;
     price:number;
     tagName:Tag[];
+    origins:string[];
 }

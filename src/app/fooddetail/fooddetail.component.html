@@ -1,16 +1,19 @@
 <div class="container">
-    <img src="{{food.url}}">
-    
+    <img src="{{food.url}}" [alt]="food.name">
+    <div class="content">
         <div class="horizontal-align">
-            <h3>{{food.name}}</h3>
-            <mat-icon [hidden]="!food.isFavorite">favorite</mat-icon>
+            <span class="name">{{food.name}}</span>
+            <mat-icon class="favorite {{food.isFavorite?'':'not'}}">favorite</mat-icon>
         </div>
 
         <div class="rating">
             <mat-icon *ngFor="let i of starArray">star</mat-icon>
         </div>
-        <div class="origin">
-            Italy
+        <div class="origins">
+            <span *ngFor="let origin of food.origins">
+                {{origin}}
+
+            </span>
         </div>
         <app-tag class="tag-align" [foodTags]="food.tagName"></app-tag>
         <div>
@@ -18,6 +21,6 @@
         </div>
         <div class="price">{{food.price | currency:'INR'}}</div>
         <button class="addToCart">Add to Cart</button>
-
+    </div>
 
 </div>
