@@ -1,0 +1,10 @@
+<div *ngFor="let item of cart.items">
+    <div class="section">
+        <img class="img" [src]="item.food.url">
+        <div class="content">
+            <span class="name">{{item.food.name}}</span>
+            <div class="quantity">{{item.quantity}}</div>
+            <button class="remove">Remove</button>
+        </div>
+    </div>
+</div>

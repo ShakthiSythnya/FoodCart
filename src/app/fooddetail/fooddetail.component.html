@@ -20,7 +20,7 @@
             Time to cook about <b>{{food.cooktime}} minutes </b>
         </div>
         <div class="price">{{food.price | currency:'INR'}}</div>
-        <button class="addToCart">Add to Cart</button>
+        <button class="addToCart" (click)="addToCart(food)">{{addedButton? "Added":"Add to Cart"}} </button>
     </div>
 
 </div>

@@ -18,6 +18,7 @@ import {FormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { TagComponent } from './tag/tag.component';
 import { FooddetailComponent } from './fooddetail/fooddetail.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooddetailComponent } from './fooddetail/fooddetail.component';
     HomeComponent,
     SearchComponent,
     TagComponent,
-    FooddetailComponent
+    FooddetailComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

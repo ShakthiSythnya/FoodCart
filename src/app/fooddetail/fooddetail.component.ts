@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FoodService } from '../services/food.service';
 import { filter } from 'rxjs';
 import { FoodRecipe } from '../models/foodRecipe';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-fooddetail',
@@ -11,10 +12,14 @@ import { FoodRecipe } from '../models/foodRecipe';
 })
 export class FooddetailComponent implements OnInit {
 
-  constructor(private _activatedRoute: ActivatedRoute, private _foodService: FoodService) { }
+  constructor(private _activatedRoute: ActivatedRoute, private _foodService: FoodService, private _cartService: CartService) { }
+
+  foodInCart:Array<number> =[];
+
   
   starArray:Array<number> = Array(5).fill(0);
   food!:FoodRecipe;
+  addedButton: boolean=false;
 
   ngOnInit(): void {
     this._activatedRoute.params.subscribe((param)=>{
@@ -27,7 +32,13 @@ export class FooddetailComponent implements OnInit {
         })
 
       }
-    })
-  }
+    });
 
+    
+  }
+  addToCart(food: FoodRecipe)
+  {
+    this._cartService.addItemsToCart(food);
+    this.addedButton = true;
+  }
 }
