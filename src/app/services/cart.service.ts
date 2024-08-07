@@ -31,6 +31,6 @@ export class CartService {
 
   removeItemFromCart(food:FoodRecipe)
   {
-    this.cart.items.filter(x=>x.food.id != food.id);
+    this.cart.items = this.cart.items.filter(x=>x.food.id != food.id);
   }
 }
